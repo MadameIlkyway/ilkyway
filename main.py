@@ -17,7 +17,7 @@ print("SV-Beitragsrechner")
 print("-------------------------------")
 print()
 
-kk = "sdfsdfsdf"
+kk = "sdfsdfsdfdfdssdfsdfs"
 
 if kk not in dictKKZ:
     print("not in!!!")
