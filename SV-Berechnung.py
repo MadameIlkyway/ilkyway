@@ -1,6 +1,6 @@
 import csv                                                     # importiere das CSV Modul, das du hinterlegt hast
 
-f = open("KK_Zusatz1.csv", newline="")                          # öffnen der Datei und in Variable abspeichern, f für file, newline aktiviert den universellen Zeichenmodus,Python erkennt automatisch, welcher der vielen möglichen Zeilenumbrüche genutzt wird
+f = open("KK_Zusatz1.csv", newline="", encoding="iso8859-15")  # öffnen der Datei und in Variable abspeichern, f für file, newline aktiviert den universellen Zeichenmodus,Python erkennt automatisch, welcher der vielen möglichen Zeilenumbrüche genutzt wird
 KKZ_csv = csv.DictReader(f, delimiter=",", quotechar='"')      # DictReader wandelt die jeweilige Zeile aus CSV Datei in ein Dictionary um, delimiter legt das Trennzeichen fest (hier ein Semikolon)
 dictKKZ = {}
 for dictionary in KKZ_csv:
