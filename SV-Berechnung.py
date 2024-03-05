@@ -57,7 +57,7 @@ else :
     else :
         print("Hier ist der Halbteilungsgrundsatz anzuwenden. Bemessungsgrundlage:", entgelt, "Euro.")
         print()
-        kv = round((7.3 + kkzusatz) * entgelt / 100, 2)
+        kv = round((14.6 + kkzusatz) * entgelt / 100 / 2, 2)
         pv = round((2.2 + PVZusatz) * entgelt / 100, 2)
         rv = round(9.3 * entgelt / 100, 2)
         av = round(1.3 * entgelt / 100, 2)
