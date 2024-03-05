@@ -28,12 +28,8 @@ while kk not in dictKKZ:
    kk = input("Eingabe Krankenkasse: ")
 
 kinderlos = input("Über 23 Jahre ohne Kind (j/n): ")
-
 print()
-
 kkzusatz = dictKKZ[kk]
-#print(kkzusatz)
-
 
 if kinderlos == "j":
     PVZusatz = 0.6
@@ -76,7 +72,10 @@ print("Es geht noch weiter.")
 print("Du willst doch bestimmt wissen, wie dein Nettobetrag aussehen wird.")
 print()
 print("Deine Lohnsteuer kannst du hier berechnen lassen: https://www.bmf-steuerrechner.de/bl/bl2023_01/eingabeformbl2023_01.xhtml")
+print("Der benötige Zusatzbeitrag der Krankenkasse lautet: ", kkzusatz)
+print()
 steuern = float(input("Steuern: "))
 netto = entgelt - steuern - pv
 print()
 print("Dein Nettobetrag lautet: ", netto, "Euro.")
+print()
