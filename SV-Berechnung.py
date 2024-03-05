@@ -23,7 +23,7 @@ print()
 
 entgelt = int(input("Eingabe Entgelt: "))
 kk = input("Eingabe Krankenkasse: ")
-if kk not in dictKKZ:
+while kk not in dictKKZ:
    print("Gibts nicht. Versuchs noch einmal.")
    kk = input("Eingabe Krankenkasse: ")
 
@@ -48,6 +48,7 @@ if entgelt > 538 and entgelt < 2000.01:
     pv = round((2.2 + PVZusatz) * BBGAN / 100, 2)
     rv = round(9.3 * BBGAN / 100, 2)
     av = round(1.3 * BBGAN / 100, 2)
+    sv = kv + pv + rv + av
     print()
     print("Die SV-Beiträge lauten: ")
     print("KV: ", kv, "Euro")
@@ -72,9 +73,10 @@ else :
 
 print("-------------------------")
 print("Es geht noch weiter.")
-print("Du willst doch bestimmt noch wissen, wie dein Nettobetrag insgesamt aussehen wird.")
+print("Du willst doch bestimmt wissen, wie dein Nettobetrag aussehen wird.")
 print()
-steuern = int(input("Steuern lt. Bmf-Rechner: "))
-netto = entgelt-steuern-(kv-pv-rv-av)
+print("Deine Lohnsteuer kannst du hier berechnen lassen: https://www.bmf-steuerrechner.de/bl/bl2023_01/eingabeformbl2023_01.xhtml")
+steuern = float(input("Steuern: "))
+netto = entgelt - steuern - pv
 print()
-print("Nettobetrag: ", netto, "Euro")
+print("Dein Nettobetrag lautet: ", netto, "Euro.")
