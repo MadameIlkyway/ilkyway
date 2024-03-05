@@ -61,6 +61,7 @@ else :
         pv = round((2.2 + PVZusatz) * entgelt / 100, 2)
         rv = round(9.3 * entgelt / 100, 2)
         av = round(1.3 * entgelt / 100, 2)
+        sv = kv + pv + rv + av
         print("Die SV-Beiträge lauten: ")
         print("KV: ", kv, "Euro")
         print("PV: ", pv, "Euro")
@@ -75,7 +76,7 @@ print("Deine Lohnsteuer kannst du hier berechnen lassen: https://www.bmf-steuerr
 print("Der benötige Zusatzbeitrag der Krankenkasse lautet: ", kkzusatz)
 print()
 steuern = float(input("Steuern: "))
-netto = entgelt - steuern - pv
+netto = entgelt - steuern - sv
 print()
 print("Dein Nettobetrag lautet: ", netto, "Euro.")
 print()
