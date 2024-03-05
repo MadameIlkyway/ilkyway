@@ -21,7 +21,7 @@ print()
 #if dictKKZ.get(kk) is None:
    # print("get mit None!!!")
 
-entgelt = int(input("Eingabe Entgelt: "))
+entgelt = float(input("Eingabe Entgelt: "))
 kk = input("Eingabe Krankenkasse: ")
 while kk not in dictKKZ:
    print("Gibts nicht. Versuchs noch einmal.")
